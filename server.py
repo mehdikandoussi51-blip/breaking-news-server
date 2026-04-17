@@ -13,3 +13,6 @@ GNEWS_API_KEY = os.getenv("GNEWS_API_KEY")
 
 app.add_middleware(
     COR
+@app.get("/")
+def home():
+    return {"message": "News API is running"}
